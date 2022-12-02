@@ -1,0 +1,29 @@
+#include <sourcemod>
+
+#pragma semicolon 1
+#pragma newdecls required
+
+public void OnPluginStart()
+{
+  RegConsoleCmd("sm_gg", CMD_GG);
+  RegConsoleCmd("sm_ggodftjsi", CMD_GG);
+}
+
+public Action CMD_GG(int client, int args)
+{
+  char arg[64], arg2[64];
+
+  GetCmdArg(0, arg, sizeof(arg));
+  GetCmdArg(0, arg2, sizeof(arg2));
+
+  if(StrEqual(arg, "gg"))
+  {
+       // code
+  }
+  else if(StrEqual(arg2, "ggodftjsi"))
+  {
+       // code 
+  }
+
+  return Plugin_Handled;
+}
